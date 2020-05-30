@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">twilio.res.config</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='integration']" position="after">
+                <h2>Twilio SMS</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Account SID</span>
+                            <div class="text-muted">
+                                Set Config Parameter Account SID for Twillio SMS
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="twilio_account_sid" string="Account SID" class="col-3 col-lg-3 o_light_label"/>
+                                    <field name="twilio_account_sid" class="oe_inline"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Auth Token</span>
+                            <div class="text-muted">
+                                Set Config Parameter Auth Token for Twillio SMS
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="twilio_auth_token" string="Auth Token" class="col-3 col-lg-3 o_light_label"/>
+                                    <field name="twilio_auth_token" class="oe_inline"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Number From</span>
+                            <div class="text-muted">
+                                Set Config Parameter Number From for Twillio SMS
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="twilio_number" string="Number From" class="col-3 col-lg-3 o_light_label"/>
+                                    <field name="twilio_number" class="oe_inline"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

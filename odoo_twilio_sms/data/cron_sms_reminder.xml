@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_cron_send_sms_reminder" model="ir.cron">
+	        <field name="name">Send SMS Booking Reminder for Customer</field>
+	        <field name="interval_number">30</field>
+	        <field name="interval_type">minutes</field>
+	        <field name="numbercall">-1</field>
+	        <field name="doall" eval="False"/>
+	        <field name="model_id" ref="spa_salon_pos.model_pos_booking"/>
+	        <field name="code">model.check_sms_reminder()</field>
+	        <field name="state">code</field>
+	    </record>
+    </data>
+</odoo>
